@@ -1,0 +1,27 @@
+.areaContainer{
+    margin:0px auto;
+    width: 1200px;
+    padding: 0px 20px;
+    max-width: 100%;
+}
+
+
+.header{
+    background-color: #202020;
+    color:white;
+    margin-bottom: 20px;
+   
+    padding: 20px 0px;
+}
+
+
+.headerContainer{
+    display: flex;
+    align-items: center;
+
+}
+
+.userData{
+    display: flex;
+    align-items: center;
+}

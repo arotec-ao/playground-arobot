@@ -1,0 +1,47 @@
+.hw{
+    display: flex;
+}
+
+.hwImageArea{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hwTextArea{
+    width: 50%;
+}
+
+
+.hwTitle{
+    font-weight:bold;
+    position: relative;
+    margin-bottom: 25px;
+    width: fit-content;
+    font-size: 1.3em;
+}
+
+.hwTitle::after{
+    position: absolute;
+    content: '';
+    display:block;
+    background: #ffb522;
+    height: 3px;
+    top: 100%;
+    transform: translateY(2px);
+    width: 100%;
+    border-radius: 4px;
+}
+
+.hwContent{
+    color:#303030;
+
+}
+
+.hwBlurImage{
+    position: relative;
+    z-index:2;
+    transform: rotate(-5deg);
+}
+
