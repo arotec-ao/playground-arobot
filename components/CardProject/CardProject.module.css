@@ -1,0 +1,37 @@
+.card{
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px rgba(255, 168, 0, 0.15);
+    width: 250px;
+    max-width: 100%;
+    
+}
+
+.cardHeader{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.btnEdit{
+    background:transparent;
+    cursor: pointer;
+}
+
+.btnEdit:hover{
+    opacity: 0.7;
+}
+.btnAbrir{
+    background-color: var(--cor_primary);
+    padding: 4px 8px;
+    margin-bottom: 20px;
+    color:white;
+    cursor:pointer;
+    border-radius: 8px;
+}
+
+.legendTime{
+    font-size:0.95em;
+    color:#929292;
+}
