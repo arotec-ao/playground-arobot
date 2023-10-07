@@ -1,0 +1,12 @@
+.itemAction{
+    background-color: #005484;
+    opacity: 0.7;
+    padding:6px 8px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.itemActionCurrent{
+    opacity: 1;
+    
+}

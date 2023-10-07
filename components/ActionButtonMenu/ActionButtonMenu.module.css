@@ -1,0 +1,7 @@
+.btnActionMenu{
+    background-color: var(--cor_secundary);
+    padding: 8px 10px;
+    border-radius: 50%;
+    width: fit-content;
+    position: relative;
+}

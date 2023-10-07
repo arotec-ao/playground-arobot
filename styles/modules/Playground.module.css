@@ -1,0 +1,162 @@
+.app{
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.sidebar{
+    background-color:white;
+    padding: 20px 15px;
+    z-index:1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+}
+
+.btnMenu{
+    background: none;
+    padding: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.actionsContainer{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+}
+
+.mainArea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.mainActionArea{
+    flex:1;
+    display: flex;
+    width: 100%;
+}
+
+.FluxoControl{
+    background-color: white;
+    padding: 0px 25px;
+    width:25%;
+}
+
+.fluxo{
+    overflow-y: auto;
+}
+
+
+.FluxoModeSwitch{
+    background-color: #EAEAEA;
+    padding: 8px 20px;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.FluxoModeSwitchButton{
+background: transparent;
+cursor: pointer;
+padding: 2px 6px;
+}
+.playgroundArea{
+    flex:1;
+    background-color:#F8F8F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+
+}
+
+.panelRunFunctions{
+    background-color: #101010;
+    padding: 8px 20px;
+    border-radius: 0px 0px 20px 20px;
+   top:0px;
+   z-index:4;
+    left:50px;
+    position: absolute;
+    font-weight: bold;
+}
+.btnRunFunction{
+    cursor: pointer;
+    background-color: transparent;
+}
+.projectoInfo{
+    color: #00111C;   
+   top:10px;
+   z-index:4;
+    right:50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.btnChangeProject{
+    cursor: pointer;
+    background-color: transparent;
+}
+.boardPlayground{
+background-color: white;
+width: 700px;
+height: 400px;
+overflow: auto;
+position: relative;
+}
+
+.arobot{
+    width: 32px;
+    height: 32px;
+    background-color: var(--cor_secundary);
+    position: absolute;
+    left:50%;
+    top: 50%;
+}
+
+.FooterPanel{
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Levels{
+    background-color: #007DC6;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+.LevelsContainer{
+    display: flex;
+    align-items: center;
+ 
+}
+
+.BtnAddLevel{
+    background-color: transparent;
+    margin-left: 6px;
+    padding:0px;
+    cursor: pointer;
+}
+.FluxoLogic{
+    background-image:url('/icons/bg-fluxo.jpg');
+    background-color: #001D2E;
+    background-blend-mode: multiply;
+    color:white;
+    flex:1;
+}
+.blocksFluxoContainer{
+    display:flex;
+    height: 100%;
+    padding: 10px 30px;
+    overflow: auto;
+    align-items: center;
+}
