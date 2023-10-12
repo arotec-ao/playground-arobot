@@ -17,8 +17,8 @@ export default function ContainerBlocks({type}) {
             </div>
             <div className={Styles.cbBlocks}>
                 <div className={Styles.cbBlocksContainer}>
-                    <Block type='move' />
-                    <Block type='rotate' />
+                    <Block key='0' type='move' />
+                    <Block key='1' type='rotate' />
                 </div>
                 <button className={Styles.cbAddAction}>
                     <Image src='/icons/add-new.png' width='25' height='25' />
