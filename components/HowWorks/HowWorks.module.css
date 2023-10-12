@@ -3,14 +3,15 @@
 }
 
 .hwImageArea{
-    width: 50%;
+    width:40%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hwTextArea{
-    width: 50%;
+  flex:1;
+  padding: 0px 30px;
 }
 
 
@@ -35,6 +36,7 @@
 }
 
 .hwContent{
+    font-size:15px;
     color:#303030;
 
 }
@@ -45,3 +47,29 @@
     transform: rotate(-5deg);
 }
 
+
+
+/*Mobile Styles Home */
+@media(max-width: 800px){
+    .hwBlurImage img{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 620px){
+    .hw{
+        flex-direction: column;
+        gap: 20px 0px;
+
+    }
+
+    .hwImageArea{
+        width: 100%;
+    }
+
+    .hwTitle{
+        font-size: 1.1em;
+    }
+
+}

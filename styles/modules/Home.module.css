@@ -9,7 +9,6 @@
 .header{
 
     position: relative;
-    height:400px;
     color:white;
     width: 100%;
     padding: 40px 0px;
@@ -49,7 +48,7 @@ object-fit: cover;
 }
 
 .navbar{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center;
 }
@@ -218,4 +217,86 @@ background-color: #ccc;
 .footerRight a:hover{
     text-decoration: underline;
 
+}
+
+
+/* Mobile Styles */
+
+@media(max-width: 800px){
+
+
+    .headerContent{
+        flex-wrap: wrap;
+    }
+    .arobotSectionImagesContainer{
+        flex-wrap: wrap;
+    }
+    .arobotSectionImage{
+        width: 180px;
+        height: 180px;
+    }
+
+}
+
+@media (max-width: 620px){
+
+    .headerContent{
+        flex-direction: column;
+    
+    }
+    .headerAreaImage{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .headerAreaText{
+        margin:0px auto;
+        width:350px;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .textHeader{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .shadowHeaderButton{
+        margin:0px auto;
+    }
+
+    .textHeaderMark::after{
+        animation:none;
+    }
+
+    .headerImage{
+        width: 150px;
+        height: 150px;
+    }
+
+    .hwStepsContainer{
+        gap: 35px 0px;
+    }
+
+      .arobotSectionImage{
+        width: 120px;
+        height: 120px;
+    }
+
+    .footerContent{
+        align-items: start;
+        flex-direction: column;
+        gap: 10px 0px;
+    }
+
+    .footerRight{
+        margin-left: 0px;
+    }
+    
+}
+
+@media (max-width: 500px){
+    .navbarRight{
+        display: none;
+    }
 }

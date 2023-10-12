@@ -42,7 +42,7 @@ export default function Playground() {
                         </div>
                     </div>
                     {/* Area Background */}
-                    <div className={Styles.playgroundArea}>
+                    <div className={Styles.playgroundArea +' '+Styles.areaActive}>
 
                         <div className={Styles.panelRunFunctions}>
                             <button className={Styles.btnRunFunction}>
@@ -73,7 +73,16 @@ export default function Playground() {
                         </div>
                     </div>
                 </div>
+                {/* Switch Area em Mobile Styles */}
+                <div className={Styles.switchArea}>
+                    <button className={Styles.btnSwitchArea}>
+                        Estrutura
+                    </button>
 
+                    <button className={Styles.btnSwitchArea + ' ' + Styles.btnSwitchAreaCurrent}>
+                        Execução
+                    </button>
+                </div>
                 {/* Fluxo de dados */}
                 <div className={Styles.FooterPanel}>
                     <div className={Styles.Levels}>

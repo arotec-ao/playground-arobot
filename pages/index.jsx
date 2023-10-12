@@ -28,7 +28,6 @@ export default function Home() {
             <div className={HomeStyle.navbarRight}>
               <Link  className={HomeStyle.headerLink} href={'/playground'}>Playground</Link>
               <Link className={HomeStyle.headerLink} href={'/#arobot'}>Conheça AROBOT</Link>
-              <Link href="/register"><Button color="secundary">Registra-se</Button></Link>
             </div>
           </div>
 
@@ -36,7 +35,7 @@ export default function Home() {
           <div className={HomeStyle.headerContent}>
 
             <div className={HomeStyle.headerAreaImage}>
-              <Image className="image-box" />
+              <Image className={HomeStyle.headerImage + ' '+ "image-box"} />
             </div>
 
             <div className={HomeStyle.headerAreaText}>
@@ -125,7 +124,8 @@ export default function Home() {
 
                 <Link href='/#'>Home</Link>
                 <Link href='/playground'>Playground</Link>
-                <a href='https://vercel.arotec.app' target="blank">AROTEC</a>
+                <Link href='/docs'>Documentação</Link>
+                <a href='https://arotec.ao' target="_blank">AROTEC</a>
               </div> 
             </div> 
         </div>
