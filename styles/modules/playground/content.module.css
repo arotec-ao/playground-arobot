@@ -1,0 +1,13 @@
+.mainArea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.mainActionArea{
+    flex:1;
+    display: flex;
+    width: 100%;
+}
+

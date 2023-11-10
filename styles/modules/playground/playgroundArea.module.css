@@ -1,0 +1,43 @@
+
+.playgroundArea{
+    flex:1;
+    background-color:#F8F8F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+
+}
+
+.panelRunFunctions{
+    background-color: #101010;
+    padding: 8px 20px;
+    border-radius: 0px 0px 20px 20px;
+   top:0px;
+   z-index:4;
+    left:50px;
+    position: absolute;
+    font-weight: bold;
+}
+.btnRunFunction{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.boardPlayground{
+background-color: white;
+width: 700px;
+height: 400px;
+overflow: auto;
+position: relative;
+}
+
+.arobot{
+    width: 32px;
+    height: 32px;
+    background-color: var(--cor_secundary);
+    position: absolute;
+    left:50%;
+    top: 50%;
+}

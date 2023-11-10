@@ -1,0 +1,23 @@
+.switchArea{
+    padding: 4px;
+    background-color: white;
+    display: none;
+    align-items: center;
+    gap:0px 8px;
+}
+
+.btnSwitchArea{
+
+background: none;
+
+}
+
+.btnSwitchAreaCurrent{
+    padding: 4px;
+   border-bottom: 2px solid var(--cor_primary);
+    color: var(--cor_primary);
+
+    font-weight: bold;
+
+    cursor: pointer;
+}

@@ -4,4 +4,10 @@
     border-radius: 50%;
     width: fit-content;
     position: relative;
+    cursor: pointer;
+}
+
+
+.btnActionMenu:focus{
+    outline: 2px solid rgb(255, 201, 54);
 }
