@@ -1,15 +1,16 @@
 import '@/styles/globals.css'
 import '@/styles/reset.css'
-import Head from 'next/head'
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
-  return( 
-  <>
-    <Head>
-        <title>AROBOT Playgorund</title>
+  return (
+    <>
+      <Head>
+        <title>AROBOT Playground</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Head>
-    <Component {...pageProps} />
-  </>);
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 
 }

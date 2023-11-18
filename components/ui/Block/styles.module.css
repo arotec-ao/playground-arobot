@@ -1,0 +1,129 @@
+.block {
+    display: flex;
+    align-items: center;
+}
+
+.blockContent {
+    display: flex;
+    align-items: center;
+    padding: 6px 30px 6px 8px;
+    background-color: #0084CF;
+    color: white;
+    border-radius: 6px;
+    gap: 8px;
+    font-size: 15px;
+    position: relative;
+    animation: block_add 0.8s;
+}
+
+.blockContent:hover .delete {
+    display: block;
+}
+
+.blockContent input {
+    width: 32px;
+    border-bottom: 2px solid #00A3FF;
+    text-align: center;
+
+}
+
+
+.blockContent input:focus {
+    border-color: #004974;
+}
+
+.blockContent input::-webkit-inner-spin-button {
+    display: none;
+}
+
+@keyframes block_add {
+    from {
+        top: -15px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.delete {
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    opacity: 0.5;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.delete:hover {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.blockArrows {
+    margin-left: 10px;
+}
+
+.arrowUp,
+.arrowDown {
+    display: block;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.arrowUp {
+    transform: rotate(180deg);
+}
+
+.arrowUp:hover,
+.arrowDown:hover {
+    opacity: 0.5;
+}
+
+
+/* Breakpoint para trocar orientação */
+@media(max-width: 650px) {
+    .block {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .blockContent {
+        padding: 6px 6px 30px 6px;
+        font-size: 12px;
+    }
+
+    .blockContent input {
+        font-size: 12px;
+        transform: rotate(90deg);
+        height: 20px;
+        width: 18px;
+
+
+    }
+
+    .blockContent .delete {
+        display: block;
+    }
+
+    .delete {
+        top: unset;
+        bottom: 4px;
+    }
+
+    .arrowUp {
+        transform: rotate(-90deg);
+    }
+
+    .arrowDown {
+        transform: rotate(90deg);
+    }
+
+    .blockArrows {
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+
+
+}

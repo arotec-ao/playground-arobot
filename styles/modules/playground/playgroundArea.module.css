@@ -1,43 +1,83 @@
-
-.playgroundArea{
-    flex:1;
-    background-color:#F8F8F8;
+.playgroundArea {
+    flex: 1;
+    background-color: #F8F8F8;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 
-
 }
 
-.panelRunFunctions{
+.panelRunFunctions {
     background-color: #101010;
     padding: 8px 20px;
     border-radius: 0px 0px 20px 20px;
-   top:0px;
-   z-index:4;
-    left:50px;
+    top: 0px;
+    z-index: 4;
+    left: 50px;
     position: absolute;
     font-weight: bold;
 }
-.btnRunFunction{
+
+.btnRunFunction {
     cursor: pointer;
     background-color: transparent;
 }
 
-.boardPlayground{
-background-color: white;
-width: 700px;
-height: 400px;
-overflow: auto;
-position: relative;
+.btnRunFunction:disabled {
+    opacity: 0.5;
+    cursor: default;
 }
 
-.arobot{
-    width: 32px;
-    height: 32px;
-    background-color: var(--cor_secundary);
-    position: absolute;
-    left:50%;
-    top: 50%;
+.boardPlayground {
+    background-color: white;
+    width: 700px;
+    height: 400px;
+    overflow: auto;
+    position: relative;
+}
+
+@media(max-width: 1100px) {
+    .boardPlayground {
+        width: 500px;
+    }
+}
+
+@media (max-width: 800px) {
+    .boardPlayground {
+        width: 320px;
+    }
+}
+
+/* Breakpoint para trocar orientação */
+
+@media(max-width: 650px) {
+
+    .boardPlayground {
+        width: 100%;
+        margin: 0px 10px;
+        height: 350px;
+    }
+
+    .panelRunFunctions {
+        padding: 4px 10px;
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        padding: 12px 8px;
+        opacity: 0.9;
+
+        right: 0px;
+        top: 10px;
+        left: unset;
+        border-radius: 20px 0px 0px 20px;
+
+    }
+
+    .btnRunFunction img {
+        width: 16px;
+        height: 16px;
+        transform: rotate(90deg);
+    }
+
+
 }

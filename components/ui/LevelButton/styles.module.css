@@ -1,0 +1,28 @@
+.levelButton {
+    background-color: #004F7E;
+    color: white;
+    height: 100%;
+    padding: 8px 20px;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    border-radius: 0px 10px 0px 0px;
+    width: fit-content;
+    flex: none;
+    cursor: pointer;
+}
+
+.levelButtonActive {
+    background-color: #00314E;
+}
+
+
+/* Breakpoint para trocar orientação */
+@media(max-width: 650px) {
+    .levelButton {
+        font-size: 10px;
+        height: fit-content;
+        padding: 10px 8px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+}

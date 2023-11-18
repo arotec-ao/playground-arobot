@@ -1,0 +1,33 @@
+.itemBlockArea {
+    display: flex;
+    align-items: center;
+    flex: none;
+}
+
+.itemBlock {
+    background-color: #005484;
+    opacity: 0.7;
+    padding: 6px 8px;
+    border-radius: 8px;
+    z-index: 2;
+    flex: none;
+    width: fit-content;
+}
+
+.itemBlockCurrent {
+    opacity: 1;
+}
+
+/* Breakpoint para trocar orientação */
+@media(max-width: 650px) {
+    .itemBlockArea {
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        font-size: 11px;
+
+    }
+
+    .itemBlockArea img {
+        display: none;
+    }
+}

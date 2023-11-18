@@ -1,20 +1,25 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
-    margin:0px;
-    padding:0px;
+
+body {
+    margin: 0px;
+    padding: 0px;
 }
 
-button, input, select, textarea{
-    border:none;
+button,
+input,
+select,
+textarea {
+    border: none;
     outline: none;
 }
 
-a{
-    color:unset;
+a {
+    color: unset;
     text-decoration: none;
 }
+
 @font-face {
     font-family: 'Roboto';
     src: url('/fonts/Roboto-Regular.ttf');

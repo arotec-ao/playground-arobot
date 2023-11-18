@@ -1,12 +1,13 @@
-
-.FooterPanel{
-    height: 15%;
+.FooterPanel {
     display: flex;
     flex-direction: column;
+    overflow: auto;
+    height: 15%;
+    width: 100%;
 }
 
 
-.Levels{
+.Levels {
     background-color: #007DC6;
     display: flex;
     align-items: center;
@@ -14,29 +15,31 @@
     overflow: auto;
 
 }
-.LevelsContainer{
+
+.LevelsContainer {
     display: flex;
     align-items: center;
 }
 
-.BtnAddLevel{
+.BtnAddLevel {
     background-color: transparent;
     margin-left: 6px;
-    padding:0px;
+    padding: 0px;
     cursor: pointer;
     width: fit-content;
-    flex:none;
+    flex: none;
 }
 
-.FluxoLogic{
-    background-image:url('/icons/bg-fluxo.jpg');
+.FluxoLogic {
+    background-image: url('/icons/bg-fluxo.jpg');
     background-color: #001D2E;
     background-blend-mode: multiply;
-    color:white;
-    flex:1;
+    color: white;
+    flex: 1;
 }
-.blocksFluxoContainer{
-    display:flex;
+
+.itemBlockFluxoContainer {
+    display: flex;
     height: 100%;
     padding: 10px 30px;
     overflow: auto;
@@ -44,62 +47,39 @@
 }
 
 
-@media(max-width: 1100px){
-    .boardPlayground{
-        width: 500px;
+
+/* Breakpoint para trocar orientação */
+@media(max-width: 650px) {
+    .FooterPanel {
+        flex-direction: row-reverse;
+        height: 100%;
+        width: 20%;
     }
 
-    .FluxoControl{
-        width: 240px;
-    }
-}
-
-@media (max-width: 800px){
-    .boardPlayground{
-        width: 320px;
-    }
-}
-
-@media(max-width: 650px){
-    .switchArea{
-        display: flex;
+    .Levels {
+        height: 100%;
+        width: 50%;
+        align-items: start;
+        flex-direction: column;
+        padding-top: 0px;
+        padding-bottom: 10px;
     }
 
-    .FluxoControl{
-        display:none;
-        width: 100%;
+    .LevelsContainer {
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+
     }
 
-    .playgroundArea{
-        display: none;
-        width: 100%;
+    .FluxoLogic {
+        width: 50%;
     }
 
-    .sidebar{
-        display: none;
+    .itemBlockFluxoContainer {
+        align-items: start;
+        flex-direction: column;
+        padding: 30px 0px;
     }
-
-    .areaActive{
-        display: flex;
-    }
-
-    .boardPlayground{
-        width: 100%;
-        margin:0px 10px;
-        height: 350px;
-    }
-
-    .panelRunFunctions{
-        padding:4px 10px;
-    }
-
-    .btnRunFunction img{
-        width: 20px;
-        height: 20px;
-    }
-
-    .projectoInfo{
-        right: 10px;
-    }
-
 }

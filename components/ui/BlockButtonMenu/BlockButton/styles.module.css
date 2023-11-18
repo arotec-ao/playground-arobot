@@ -1,0 +1,11 @@
+.blockButton {
+    background-color: #FFF3DB;
+    padding: 4px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+    gap: 6px;
+    cursor: pointer;
+}

@@ -1,27 +1,30 @@
-:root{
+:root {
   --cor_primary: #00A3FF;
-  --cor_secundary:  #FFA800;
+  --cor_secundary: #FFA800;
 }
-html, body{
+
+html,
+body {
   width: 100%;
   height: 100%;
   scroll-behavior: smooth;
 }
-body{
-  font-size:16px;
+
+body {
+  font-size: 16px;
   background: white;
-  color:#101010;
+  color: #101010;
   font-family: 'Roboto', sans-serif;
 }
 
-.box{
+.box {
   width: 25px;
   height: 25px;
   background: white;
 }
 
 
-.circle{
+.circle {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -29,9 +32,8 @@ body{
 }
 
 
-.image-box{
+.image-box {
   width: 250px;
   height: 250px;
-
   background-color: white;
 }

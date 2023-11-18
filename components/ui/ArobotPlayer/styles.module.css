@@ -1,0 +1,36 @@
+.arobot {
+    width: 32px;
+    height: 32px;
+    background-color: var(--cor_secundary);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+/*apenas um apontador de teste*/
+.arobot::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    width: 8px;
+    transform: translate(100%, -50%);
+    height: 10px;
+    background: red;
+}
+
+/*luzes do arobot*/
+.arobotLuzActive::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    width: 35px;
+    transform: translate(100%, -50%);
+    height: 15px;
+    background: rgb(255, 251, 0);
+    filter: blur(10px);
+}
