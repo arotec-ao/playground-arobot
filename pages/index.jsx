@@ -77,31 +77,22 @@ export default function Home() {
           <div className={HomeStyle.hwTitleSection}>Como Funciona?</div>
           <div className={HomeStyle.hwStepsContainer}>
             <HowWorks title="Crie suas etapas e instruções" srcImage="/images/hw-1.jpeg">
-              Lorem Ipsum is simply dummy text of the printing
-              and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-              It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and
-              more recently with desktop publishing software l
-              like Aldus PageMaker including versions of Lorem
+              Para começares um projeto no playground, começa por adicionar
+              blocos ao teu projeto através dos menus na barra lateral
+              esquerda. Estes blocos são os elementos fundamentais do
+              playground, pois definem a sequência de comportamentos que
+              o teu AROBOT deve realizar durante a execução. Podes personalizar
+              cada bloco ao alterar os seus valores, como no caso de "mover x passos",
+              onde x é um valor que podes ajustar conforme necessário. Além disso, é
+              fácil movimentar ou remover um bloco para personalizares o teu projeto da
+              melhor maneira possível.
             </HowWorks>
 
             <HowWorks title="Execute e vê o resultado" srcImage="/images/hw-2.jpeg">
-              Lorem Ipsum is simply dummy text of the printing.
-              and typesetting industry. Lorem Ipsum has been
-              the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type
-              and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-              It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software
-              like Aldus PageMaker including versions of Lorem Ipsum
+              Depois de organizares a ordem dos teus blocos conforme desejado, executa
+              o teu projeto para verificar o resultado, identificar possíveis erros
+              e encontrar oportunidades de melhoria. Demonstra às tuas amizades
+              o teu talento ao programar um AROBOT desde o início.
             </HowWorks>
           </div>
         </div>
