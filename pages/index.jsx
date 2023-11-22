@@ -1,4 +1,4 @@
-import HomeStyle from '@/styles/modules/Home.module.css'
+import HomeStyle from '@/styles/modules/home.module.css'
 import Button from '@/components/ui/Button'
 import Link from 'next/link'
 import Image from 'next/image'
