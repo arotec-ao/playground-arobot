@@ -8,6 +8,51 @@
 
 }
 
+.exportImportProject {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 4px 6px;
+    user-select: none;
+}
+
+.exportImportProjectActive {
+    background: #ffb522;
+}
+
+.exportImportProjectActive img {
+    filter: invert();
+}
+
+.exportImportMenu {
+    padding: 6px;
+    background-color: white;
+    position: absolute;
+    left: 10px;
+    transform: translateX(-100%);
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+    min-width: 130px;
+}
+
+.exportProject,
+.importProject {
+    cursor: pointer;
+    padding: 4px;
+    background-color: transparent;
+}
+
+.exportProject:hover,
+.importProject:hover {
+    color: #707070;
+}
+
 .panelRunFunctions {
     background-color: #101010;
     padding: 8px 20px;
@@ -79,5 +124,21 @@
         transform: rotate(90deg);
     }
 
+
+    .exportImportProject {
+        right: 15px;
+        top: unset;
+        bottom: 25px;
+    }
+
+    .exportImportMenu {
+        writing-mode: vertical-lr;
+        min-width: unset;
+        min-height: 130px;
+        top: unset;
+        left: unset;
+        transform: translate(-100%, -100%);
+        font-size: 13px;
+    }
 
 }

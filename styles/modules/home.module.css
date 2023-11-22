@@ -178,7 +178,7 @@
 
 .hwTitleSection {
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1.6em;
     text-transform: uppercase;
     margin-bottom: 25px;
 
@@ -191,8 +191,37 @@
     gap: 25px 0px;
 }
 
+/*ARO-CODE Section*/
+.arocode {
+    padding: 40px 0px;
+}
+
+.arocodeTitle {
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.arocodeContent {
+    max-width: 900px;
+    text-align: justify;
+    margin: 0px auto;
+}
+
+.arocodeImage {
+    margin: 0px auto;
+    display: block;
+}
+
+.arocodeButton {
+    margin: 20px auto;
+    display: block;
+}
 
 /*Arobot Section*/
+
+
 
 .arobotSection {
     padding: 25px 0px;
@@ -200,7 +229,7 @@
     background-size: cover;
     color: white;
     background-blend-mode: multiply;
-    background-color: #aaa;
+    background-color: #7e7e7e;
 }
 
 .arobotSectionTitle {
@@ -231,6 +260,8 @@
 }
 
 
+
+
 /*Rodapé*/
 
 
@@ -253,6 +284,7 @@
     margin-left: auto;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     gap: 10px;
 }
@@ -279,6 +311,10 @@
 
 @media(max-width: 800px) {
 
+    .arocodeImage {
+        max-width: 100%;
+        height: auto;
+    }
 
     .headerContent {
         flex-wrap: wrap;

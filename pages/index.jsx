@@ -97,6 +97,25 @@ export default function Home() {
           </div>
         </div>
 
+        {/* ARO-CODE */}
+        <div className={HomeStyle.arocode}>
+          <div className={HomeStyle.areaContainer}>
+            <div className={HomeStyle.arocodeTitle}>ARO-CODE</div>
+            <div className={HomeStyle.arocodeContent}>
+              Se estiveres interessado em aprimorar as tuas habilidades de codificação
+              além do uso de blocos,
+              experimenta o Aro-Code, uma plataforma inovadora desenvolvida pela Arotec.
+              O Aro-Code tem como
+              foco permitir que os desenvolvedores construam seus algoritmos de forma
+              totalmente online.
+              Com o Aro-Code, terás a oportunidade de explorar uma variedade de linguagens
+              de programação, desde as mais básicas até as mais avançadas. A interface intuitiva da plataforma facilita a criação e teste dos teus códigos em tempo real.
+            </div>
+            <Button className={HomeStyle.arocodeButton} color="primary"><Link href='https://dev.arotec.ao' target='_blank'>Teste já</Link></Button>
+            <Image className={HomeStyle.arocodeImage} src='/images/aro-code.png' height='300' width='700' />
+          </div>
+        </div>
+
         {/* AROBOT Section */}
         <div id="arobot" className={HomeStyle.arobotSection}>
           <div className={HomeStyle.areaContainer}>
@@ -115,6 +134,8 @@ export default function Home() {
           </div>
 
         </div>
+
+
       </div>
 
       {/*Footer */}
@@ -128,6 +149,7 @@ export default function Home() {
               <Link href='/#'>Ínicio</Link>
               <Link href='/playground'>Playground</Link>
               <Link href='/docs'>Documentação</Link>
+              <Link href='https://dev.arotec.ao' target="_blank">ARO-CODE</Link>
               <Link href='https://arotec.ao' target="_blank">AROTEC</Link>
             </div>
           </div>
