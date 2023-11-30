@@ -37,3 +37,23 @@ body {
   height: 250px;
   background-color: white;
 }
+
+/* Global Styles */
+.paragraph{
+  margin-bottom: 10px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.image-center{
+ margin:0px auto;
+ display: block;
+}
+
+.border-box{
+  border: 2px solid #eee;
+}
+.image-docs{
+max-width: 100%;
+height: auto
+}

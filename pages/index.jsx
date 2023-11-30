@@ -148,7 +148,7 @@ export default function Home() {
 
               <Link href='/#'>Ínicio</Link>
               <Link href='/playground'>Playground</Link>
-              <Link href='/docs'>Documentação</Link>
+              <Link href='/documentacao'>Documentação</Link>
               <Link href='https://dev.arotec.ao' target="_blank">ARO-CODE</Link>
               <Link href='https://arotec.ao' target="_blank">AROTEC</Link>
             </div>
