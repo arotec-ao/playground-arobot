@@ -139,5 +139,7 @@ export default function ArobotPlayer() {
         setLuzActive(false);
     }
 
-    return (<div className={Styles.arobot + ' ' + (luzActive ? Styles.arobotLuzActive : '')} ref={arobot}></div>);
+    return (<div className={Styles.arobot + ' ' + (luzActive ? Styles.arobotLuzActive : '')} ref={arobot}>
+        <img width='70px' height='auto' src="/player.png" alt="" />
+    </div>);
 }
