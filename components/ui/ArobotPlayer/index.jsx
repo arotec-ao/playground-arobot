@@ -2,6 +2,11 @@ import Styles from './styles.module.css';
 import PlaygroundContext from '@/components/contexts/PlaygroundContext';
 import { useContext, useEffect, useRef, useState } from 'react';
 
+import Image from 'next/image';
+
+import arobotDefault from '@/public/player.png';
+import arobotTop from '@/public/player2.png';
+
 
 
 //fórmula de conversão de graus para radiano. ((PI * 2) /360) * graus
@@ -14,16 +19,23 @@ const timeUpdate = 15;
 
 var currentAnimation = null;
 
+const imagesArobot ={
+    playerDefault:  arobotDefault,
+    playerTop: arobotTop
+}
+
 export default function ArobotPlayer() {
     const { arobotTriggers, runState } = useContext(PlaygroundContext);
     const arobot = useRef(null);
+    
+    const [currentRender, setCurrentRender] = useState(imagesArobot.playerDefault);
     const [luzActive, setLuzActive] = useState(false);
 
 
     useEffect(() => {
         const idInterval = setInterval(() => {
             if (arobot.current) {
-                ///   arobot.current.scrollIntoView(true);
+                arobot.current.scrollIntoView(true);
             }
 
         }, 100);
@@ -59,6 +71,7 @@ export default function ArobotPlayer() {
                 pos.y = 0;
                 rot = 0;
                 setLuzActive(false);
+                setCurrentRender(imagesArobot.playerDefault);
             }
         }
 
@@ -95,6 +108,9 @@ export default function ArobotPlayer() {
     arobotTriggers.rotacionar = (graus) => {
         graus = parseInt(graus.toString());
         return new Promise((resolve, reject) => {
+            
+            setCurrentRender(imagesArobot.playerTop);
+
             currentAnimation = arobot.current.animate([
                 { transform: 'rotate(' + rot + 'deg)' },
                 { transform: 'rotate(' + (rot + graus) + 'deg)' }
@@ -105,8 +121,13 @@ export default function ArobotPlayer() {
             })
             currentAnimation.onfinish = () => {
                 rot = rot + graus;
+                if(rot == 0 || rot == 180){
+                    setCurrentRender(imagesArobot.playerDefault);
+                }
+             
                 resolve();
             }
+           
         })
     }
 
@@ -114,6 +135,9 @@ export default function ArobotPlayer() {
     arobotTriggers.rotacionarExato = (graus) => {
         graus = parseInt(graus.toString());
         return new Promise((resolve, reject) => {
+
+            setCurrentRender(imagesArobot.playerTop);
+            
             currentAnimation = arobot.current.animate([
                 { transform: 'rotate(' + rot + 'deg)' },
                 { transform: 'rotate(' + (graus) + 'deg)' }
@@ -124,6 +148,10 @@ export default function ArobotPlayer() {
             })
             currentAnimation.onfinish = () => {
                 rot = graus;
+
+                if(rot == 0 || rot == 180){
+                    setCurrentRender(imagesArobot.playerDefault);
+                }
                 resolve();
             }
         })
@@ -140,6 +168,6 @@ export default function ArobotPlayer() {
     }
 
     return (<div className={Styles.arobot + ' ' + (luzActive ? Styles.arobotLuzActive : '')} ref={arobot}>
-        <img width='70px' height='auto' src="/player.png" alt="" />
+        <Image width='50' src={currentRender} alt="" />
     </div>);
 }

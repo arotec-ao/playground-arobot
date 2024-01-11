@@ -16,6 +16,7 @@
     width: 100%;
     padding: 40px 0px;
     margin-bottom: 50px;
+    height: 100vh;
 }
 
 .headerCover {
@@ -120,7 +121,7 @@
 
 .textHeader {
     font-size: 1.4em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
 }
 
@@ -148,6 +149,11 @@
     border-radius: 2px;
     animation: headerMarkAnim 1.2s infinite ease-out;
 
+}
+
+.headerBututons{
+    display:flex;
+    gap: 10px;
 }
 
 @keyframes headerMarkAnim {

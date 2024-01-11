@@ -7,6 +7,9 @@ import LogoAP from '@/components/ui/LogoAP'
 
 import { useState } from 'react'
 
+import HwImage1 from '../public/images/hw-1.jpeg';
+import HwImage2 from '../public/images/hw-2.jpeg';
+
 export default function Home() {
 
   const [showNavbarLinks, setShowNavbarLinks] = useState(false);
@@ -34,6 +37,7 @@ export default function Home() {
               <div type="button" className={HomeStyle.navbarLinks + ' ' + (showNavbarLinks ? HomeStyle.navbarLinksShow : '')}
               >
                 <Link className={HomeStyle.headerLink} href={'/playground'}>Playground</Link>
+                <Link className={HomeStyle.headerLink} href={'https://dev.arotec.ao'}>ARO-CODE</Link>
                 <Link className={HomeStyle.headerLink} href={'/#arobot'}>Conheça AROBOT</Link>
               </div>
               <button type='button' className={HomeStyle.menuButton} onClick={() => {
@@ -54,13 +58,19 @@ export default function Home() {
             <div className={HomeStyle.headerAreaText}>
               <div>
                 <div className={HomeStyle.textHeader}>
-                  Teste agora o <span>AROBOT</span> sem precisar de equipamento! <br />
+                  Aproveite os nossos recursos online, e teste agora o <span>AROBOT</span> sem precisar de equipamento ou venha fazer seus testes
+                  seus códigos e projectos em linguagem de programação com ARO-CODE.
                   Viva a experiência <span className={HomeStyle.textHeaderMark}>sem custo algum</span>
                   .</div>
-                <div className={HomeStyle.shadowHeaderButton}>
-                  <Link href="/playground"><Button color="primary">Teste já</Button></Link>
-                </div>
+                <div className={HomeStyle.headerBututons}>
+                  <div className={HomeStyle.shadowHeaderButton}>
+                    <Link href="/playground"><Button color="primary">Veja AROBOT</Button></Link>
+                  </div>
 
+                  <div className={HomeStyle.shadowHeaderButton}>
+                    <Link href="/playground"><Button color="secundary">Veja ARO-CODE</Button></Link>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -76,7 +86,7 @@ export default function Home() {
         <div className={HomeStyle.areaContainer + ' ' + HomeStyle.hwSection}>
           <div className={HomeStyle.hwTitleSection}>Como Funciona?</div>
           <div className={HomeStyle.hwStepsContainer}>
-            <HowWorks title="Crie suas etapas e instruções" srcImage="/images/hw-1.jpeg">
+            <HowWorks title="Crie suas etapas e instruções" image={HwImage1}>
               Para começares um projeto no playground, começa por adicionar
               blocos ao teu projeto através dos menus na barra lateral
               esquerda. Estes blocos são os elementos fundamentais do
@@ -88,7 +98,7 @@ export default function Home() {
               melhor maneira possível.
             </HowWorks>
 
-            <HowWorks title="Execute e vê o resultado" srcImage="/images/hw-2.jpeg">
+            <HowWorks title="Execute e vê o resultado" image={HwImage2}>
               Depois de organizares a ordem dos teus blocos conforme desejado, executa
               o teu projeto para verificar o resultado, identificar possíveis erros
               e encontrar oportunidades de melhoria. Demonstra às tuas amizades

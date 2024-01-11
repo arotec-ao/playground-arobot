@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Styles from './styles.module.css'
 
-export default function HowWorks({ title, srcImage, children }) {
+export default function HowWorks({ title, image, children }) {
     return (
         <div className={Styles.hw}>
             <div className={Styles.hwTextArea}>
@@ -10,7 +10,7 @@ export default function HowWorks({ title, srcImage, children }) {
             </div>
             <div className={Styles.hwImageArea}>
                 <div className={Styles.hwBlurImage}>
-                    <Image src={srcImage} width='320' height='250' alt='' />
+                    <Image src={image} width='280' alt='' />
                 </div>
             </div>
         </div>
