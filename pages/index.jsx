@@ -68,7 +68,7 @@ export default function Home() {
                   </div>
 
                   <div className={HomeStyle.shadowHeaderButton}>
-                    <Link href="/playground"><Button color="secundary">Veja ARO-CODE</Button></Link>
+                    <Link href="https://dev.arotec.ao"><Button color="secundary">Veja ARO-CODE</Button></Link>
                   </div>
                 </div>
               </div>
