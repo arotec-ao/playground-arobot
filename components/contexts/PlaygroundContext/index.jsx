@@ -98,6 +98,111 @@ export const allBlockTypes = {
 
     },
 
+    /* temporariamente indisponivel
+    
+    controle: {
+        title: 'Controle de Fluxo',
+        description: 'Permite controlar o fluxo de execução dos seus blocos',
+        iconUrl: '/icons/fluxo.png',
+
+        blocks: [
+
+            {
+                name: 'se',
+                title: 'Se',
+
+                sequence:
+                    [
+                      
+                    ]
+            },
+
+            {
+                name: 'escolha',
+                title: 'Escolha',
+
+                sequence:
+                    [
+                      
+                    ]
+            },
+
+            {
+                name: 'repita',
+                title: 'Repita',
+
+                sequence:
+                    [
+                      
+                    ]
+            },
+
+            {
+                name: 'enquanto',
+                title: 'Enquanto',
+
+                sequence:
+                    [
+                      
+                    ]
+            },
+          
+        ]
+
+    },
+    */
+
+    variavel_console: {
+        title: 'Variavel e Saída de dados',
+        description: 'Permite criar variáveis e enviar informações no console do Playground',
+        iconUrl: '/icons/variavel.png',
+
+        blocks: [
+
+            {
+                name: 'criar_variavel',
+                title: 'Criar variavel',
+
+                sequence:
+                    [
+                        {
+                            type: 'text',
+                            content: 'Define',
+
+                        },
+                        {
+                            type: 'input',
+                            typeInput: 'text',
+                            value: ''
+                        },
+
+                        {
+                            type: 'text',
+                            content: 'com o valor',
+
+                        },
+
+                        {
+                            type: 'input',
+                            typeInput: 'text',
+                            value: ''
+                        },
+                    ]
+            },
+            {
+                name: 'console_message',
+                title: 'Emitir mensagem',
+
+                sequence:
+                    [
+                      
+                    ]
+            },
+
+        ]
+
+    },
+
     recursos: {
         title: 'Recursos',
         description: 'Permite executar recursos do AROBOT e suas funcionalides extras',

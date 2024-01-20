@@ -1,7 +1,7 @@
 import PlaygroundContent from '@/components/pages/playground/content';
 import PlaygroundContext from '@/components/contexts/PlaygroundContext';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 var lastBlockId = 1;
 
@@ -10,6 +10,28 @@ export default function Playground() {
     const [currentNivel, setCurrentNivel] = useState(0);
     const [runState, setRunState] = useState('pause');
     const [fluxoMessages, setFluxoMessage] = useState([]);
+    const [consoleMessages, setConsoleMessages] = useState([]);
+    const [variaveis, setVariaveis] = useState([]);
+
+
+
+    useEffect(()=>{
+        const variaveis_temp = [];
+        for (const b of niveis[currentNivel].blocks) {
+            if (b.name == 'criar_variavel') {
+                variaveis_temp.push({
+                    nome: b.sequence[1].value,
+                    valor: b.sequence[3].value,
+                }
+                );
+            }
+        }
+
+        setVariaveis(variaveis_temp);
+    }, [niveis]);
+
+
+    
     var state = 'pause';
 
     //acionador do arobot
@@ -147,7 +169,6 @@ export default function Playground() {
 
     //Função para começar a execução do playground
     const start = () => {
-
         if (niveis[currentNivel].blocks.length > 0) {
             setRunState('run');
             state = 'run';
@@ -160,7 +181,9 @@ export default function Playground() {
         }
 
         async function runBlocks(blocks) {
+            setConsoleMessages([]);
             const fxMensagens = [];
+            const fxConsoleMensagens = [];
             for (const block of blocks) {
 
                 if (state == 'pause') {
@@ -229,6 +252,19 @@ export default function Playground() {
                         break;
                     case 'nivel_especifico':
                         break;
+
+                    case 'console_message':
+                        var valor = block.getValue();
+
+                        await new Promise((resolve, reject) => {
+                            setTimeout(() => {
+                                setConsoleMessages([...fxConsoleMensagens, valor]);
+                                fxConsoleMensagens.push(valor);
+                                resolve();
+                            }, 200);
+                        });
+
+                        break;
                 }
             }
 
@@ -243,7 +279,8 @@ export default function Playground() {
         niveis, addNivel, currentNivel,
         setCurrentNivel, addBlock, runState,
         changeRunState, arobotTriggers, fluxoMessages,
-        deleteBlock, moveBlock
+        deleteBlock, moveBlock,
+        consoleMessages, variaveis
     }
 
     return (

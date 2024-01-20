@@ -1,0 +1,113 @@
+
+/*block inside*/
+
+.blockInside{
+    width: fit-content;
+    background-color: rgb(56, 250, 114);
+    padding: 2px 20px 2px 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 10px;
+    border-radius: 6px;
+    position:relative;
+}
+.blockInside select{
+    background-color: transparent;
+    color: white;
+}
+
+.blockInside  input{
+    border-color:rgb(26, 219, 84);
+}
+
+.blockInside input:focus{
+    border-color:rgb(15, 180, 65);
+
+}
+
+
+
+
+.blockInside select option{
+    color: #303030;
+}
+
+.blockInside:hover .delete {
+    display: block;
+}
+
+.delete {
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    opacity: 0.5;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.delete:hover {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+
+.blockAdd {
+    margin: 0px auto;
+    min-width: 30px;
+    height: 20px;
+    position: relative;
+    background-color: rgb(15, 180, 65);
+
+}
+
+
+.blockAdd:active {
+    outline: 1px solid rgb(8, 158, 53);
+
+}
+
+
+.blockAddInseded{
+    border: 1px solid  rgb(8, 158, 53);
+    border-radius: 12px;
+
+background: none;
+}
+
+
+
+/* Breakpoint para trocar orientação */
+@media(max-width: 650px) {
+    .blockInside {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .blockInside {
+        padding: 6px 6px 30px 6px;
+        font-size: 12px;
+    }
+
+    .blockInside input {
+        font-size: 12px;
+        transform: rotate(90deg);
+        height: 20px;
+        width: 18px;
+
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .blockInside .delete {
+        display: block;
+    }
+
+    .delete {
+        top: unset;
+        bottom: 4px;
+    }
+
+}

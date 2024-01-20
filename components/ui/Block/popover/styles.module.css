@@ -1,0 +1,30 @@
+.popover{
+    background-color: white;
+    position: absolute;
+    left: 50%;top:40px;
+    transform: translate(-50%, 0%);
+    z-index:10;
+    padding: 10px;
+
+    overflow: auto;
+    max-height: 200px;
+    width: 120px;
+ 
+    color: #202020;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popoverItem{
+
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    padding: 4px;
+}
+
+.popoverItem:hover{
+    opacity: 0.8;
+    background-color: #e4e4e4;
+}

@@ -56,70 +56,11 @@ export default function PlaygroundArea() {
                         //gera um erro caso está incompativel
                         const data = JSON.parse(value);
 
-                        //verificando se o formato é realmente compátivel
-                        let isCompativel = false;
-
-                        //verifica se é lista
-                        if (typeof data.length !== undefined) {
-
-                            //n representa cada nivel
-                            for (const n of data) {
-
-                                //verifica se o nivel contem a proprieda bloco
-                                if (typeof n.blocks !== undefined) {
-
-                                    //verifica se é lista
-                                    if (typeof n.blocks.length !== undefined) {
-
-                                        //caso tenha 0 blocks
-                                        if (n.blocks.length == 0) {
-                                            isCompativel = true;
-                                            continue;
-                                        }
-
-                                        //pega cada bloco e verifica se contem todas 
-                                        //propriedades
-                                        for (const b of n.blocks) {
-                                            if (typeof b.sequence !== undefined
-                                                && typeof b.id !== undefined
-                                                && typeof b.title !== undefined
-                                                && typeof b.name !== undefined) {
-                                                isCompativel = true;
-                                            }
-                                            else {
-                                                isCompativel = false;
-                                                break;
-                                            }
-                                        }
-                                    }
-
-                                    else {
-                                        isCompativel = false;
-                                    }
-
-
-                                    if (isCompativel == false) {
-                                        break;
-                                    }
-                                }
-
-                                else {
-                                    isCompativel = false;
-                                    break;
-                                }
-                            }
-
-
-                        }
-
-                        else {
-                            isCompativel = false;
-                        }
-
                         //é compativel
-                        if (isCompativel) {
+                        if (isFileDataCompatible(data)) {
                             addNivel([...data]);
                         }
+
                         else {
                             throw 'O ficheiro não é compatível com o Playground';
                         }
@@ -143,12 +84,12 @@ export default function PlaygroundArea() {
 
                 <button className={Styles.btnRunFunction} disabled={disable_buttons.play}
                     onClick={() => { changeRunState('play') }}>
-                    <Image src='/icons/play.png' width='25' height='25' alt='' />
+                    <Image src='/icons/play.png' width='20' height='20' alt='' />
                 </button>
 
                 <button className={Styles.btnRunFunction} disabled={disable_buttons.pause}
                     onClick={() => { changeRunState('pause') }}>
-                    <Image src='/icons/pause.png' width='25' height='25' alt='' />
+                    <Image src='/icons/pause.png' width='20' height='20' alt='' />
                 </button>
             </div>
 
@@ -178,4 +119,68 @@ export default function PlaygroundArea() {
         </div>
 
     )
+}
+
+function isFileDataCompatible(data){
+     //verificando se o formato é realmente compátivel
+     let isCompativel = false;
+
+     //verifica se é lista
+     if (typeof data.length !== undefined) {
+
+         //n representa cada nivel
+         for (const n of data) {
+
+             //verifica se o nivel contem a proprieda bloco
+             if (typeof n.blocks !== undefined) {
+
+                 //verifica se é lista
+                 if (typeof n.blocks.length !== undefined) {
+
+                     //caso tenha 0 blocks
+                     if (n.blocks.length == 0) {
+                         isCompativel = true;
+                         continue;
+                     }
+
+                     //pega cada bloco e verifica se contem todas 
+                     //propriedades
+                     for (const b of n.blocks) {
+                         if (typeof b.sequence !== undefined
+                             && typeof b.id !== undefined
+                             && typeof b.title !== undefined
+                             && typeof b.name !== undefined) {
+                             isCompativel = true;
+                         }
+                         else {
+                             isCompativel = false;
+                             break;
+                         }
+                     }
+                 }
+
+                 else {
+                     isCompativel = false;
+                 }
+
+
+                 if (isCompativel == false) {
+                     break;
+                 }
+             }
+
+             else {
+                 isCompativel = false;
+                 break;
+             }
+         }
+
+
+     }
+
+     else {
+         isCompativel = false;
+     }
+
+     return isCompativel;
 }

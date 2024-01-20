@@ -4,7 +4,10 @@
     overflow: auto;
     height: 15%;
     width: 100%;
+    background-color: #007DC6;
+    position: relative;
 }
+
 
 
 .Levels {
@@ -38,6 +41,12 @@
     flex: 1;
 }
 
+.Console {
+    background-color: #1d1d1d;
+    color: white;
+    flex: 1;
+}
+
 .itemBlockFluxoContainer {
     display: flex;
     height: 100%;
@@ -46,6 +55,38 @@
     align-items: center;
 }
 
+.itemConsoleMessageContainer {
+    display: flex;
+    height: 100%;
+    padding: 15px 30px 10px 30px;
+    overflow: auto;
+    flex-direction: column;
+}
+
+
+.switchArea {
+    display: flex;
+    margin-left: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.switchAreaButton {
+    background-color: #007DC6;
+    width: fit-content;
+    min-width: 50px;
+
+    border-bottom: 2px solid #003a5c;
+    color: white;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.switchAreaButtonActive {
+    background: #003a5c;
+    cursor: default;
+}
 
 
 /* Breakpoint para trocar orientação */
@@ -77,9 +118,44 @@
         width: 50%;
     }
 
+    .Console {
+        width: 50%;
+
+    }
+
     .itemBlockFluxoContainer {
         align-items: start;
         flex-direction: column;
         padding: 30px 0px;
+    }
+
+    .switchArea {
+        flex-direction: column;
+        top: unset;
+        left: unset;
+        bottom: 0px;
+        right: 0px;
+
+    }
+
+    .switchAreaButton {
+        font-size: 10px;
+        height: fit-content;
+        min-height: 50px;
+        width: unset;
+        min-width: unset;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .switchAreaButton {
+        border-bottom: none;
+        border-left: 2px solid #003a5c;
+    }
+
+    .itemConsoleMessageContainer {
+        align-items: start;
+        flex-direction: row;
+
     }
 }

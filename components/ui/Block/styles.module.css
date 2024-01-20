@@ -11,7 +11,7 @@
     color: white;
     border-radius: 6px;
     gap: 8px;
-    font-size: 15px;
+    font-size: 14px;
     position: relative;
     animation: block_add 0.8s;
 }
@@ -82,6 +82,7 @@
 }
 
 
+
 /* Breakpoint para trocar orientação */
 @media(max-width: 650px) {
     .block {
@@ -100,7 +101,8 @@
         height: 20px;
         width: 18px;
 
-
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
     }
 
     .blockContent .delete {

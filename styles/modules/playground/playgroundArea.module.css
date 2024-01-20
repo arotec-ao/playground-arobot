@@ -55,11 +55,11 @@
 
 .panelRunFunctions {
     background-color: #101010;
-    padding: 8px 20px;
+    padding: 6px 15px;
     border-radius: 0px 0px 20px 20px;
     top: 0px;
     z-index: 4;
-    left: 50px;
+    left: 30px;
     position: absolute;
     font-weight: bold;
 }

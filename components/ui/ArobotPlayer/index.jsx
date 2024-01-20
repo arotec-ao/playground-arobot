@@ -35,7 +35,7 @@ export default function ArobotPlayer() {
     useEffect(() => {
         const idInterval = setInterval(() => {
             if (arobot.current) {
-                arobot.current.scrollIntoView(true);
+              //  arobot.current.scrollIntoView(true);
             }
 
         }, 100);

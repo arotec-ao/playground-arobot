@@ -1,0 +1,28 @@
+.itemConsole{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #dddddd;
+
+}
+
+.symbol{
+    margin-right: 8px;
+    color: #797979;
+}
+
+
+
+/* Breakpoint para trocar orientação */
+@media(max-width: 650px) {
+    .itemConsole{
+        margin-bottom: 0px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+    .symbol{
+        margin-right: 0px;
+        margin-bottom: 8px;
+    }
+}

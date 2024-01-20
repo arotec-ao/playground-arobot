@@ -1,0 +1,158 @@
+/* console */
+
+.blockConsole {
+  display: flex;
+
+}
+
+
+.blockConsoleContent{
+    width: fit-content;
+    background-color: var(--cor_secundary);
+    padding: 4px 30px 4px 8px;
+    color: white;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    position:relative;
+    gap: 10px;
+    border-radius: 6px;
+    animation: block_add 0.8s;
+    background-color: #7f0bb5;
+
+}
+
+
+.blockConsoleContent input {
+    width: 32px;
+    border-bottom: 2px solid #7f0bb5;
+    text-align: center;
+
+}
+
+
+.blockConsoleContent input:focus {
+    border-color: #7f0bb5;
+}
+
+.blockConsoleContent input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.blockConsoleContent:hover .delete {
+    display: block;
+}
+
+@keyframes block_add {
+    from {
+        top: -15px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.delete {
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    opacity: 0.5;
+    transform: rotate(45deg);
+    display: none;
+}
+
+.delete:hover {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.blockArrows {
+    margin-left: 10px;
+}
+
+.arrowUp,
+.arrowDown {
+    display: block;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.arrowUp {
+    transform: rotate(180deg);
+}
+
+.arrowUp:hover,
+.arrowDown:hover {
+    opacity: 0.5;
+}
+
+
+.blockAdd {
+    margin: 0px auto;
+    min-width: 30px;
+    height: 20px;
+    position: relative;
+    background-color: #56007e;
+
+}
+
+
+.blockAdd:active {
+    outline: 1px solid #430063;
+
+}
+
+
+.blockAddInseded{
+background: none;
+}
+
+
+
+/* Breakpoint para trocar orientação */
+@media(max-width: 650px) {
+    .blockConsole {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .blockConsoleContent {
+        padding: 6px 6px 30px 6px;
+        font-size: 12px;
+    }
+
+    .blockConsoleContent input {
+        font-size: 12px;
+        transform: rotate(90deg);
+        height: 20px;
+        width: 18px;
+
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .blockConsoleContent .delete {
+        display: block;
+    }
+
+    .delete {
+        top: unset;
+        bottom: 4px;
+    }
+
+    .arrowUp {
+        transform: rotate(-90deg);
+    }
+
+    .arrowDown {
+        transform: rotate(90deg);
+    }
+
+    .blockArrows {
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+
+}
